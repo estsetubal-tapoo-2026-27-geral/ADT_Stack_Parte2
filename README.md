@@ -51,7 +51,7 @@ public class StackLinkedList<T> implements Stack<T> {
 
 Um programa deverá solicitar um número ao utilizador, e.g., 233 e apresentar esse número em binário. O algoritmo divide sucessivamente o número por 2 (divisão inteira) até zero e guarda numa pilha o resto das divisões – ver figura. O número em binário é obtido removendo todos os elementos da pilha, i.e., pela ordem de saída. 
 
-![image](stack-binary.png)
+![image](./docs/stack-binary.png)
 
 
 a. Crie uma classe `DecimalToBinary` contendo um método `main`; implemente o algoritmo solicitado no método:
