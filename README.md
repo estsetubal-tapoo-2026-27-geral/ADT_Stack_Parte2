@@ -15,6 +15,8 @@ Os exercícios solicitados são os seguintes:
 
 3. Compile e teste o programa fornecido, verificando que os resultados são os esperados; a excepção `FullStackException` deverá ser capturada com sucesso.
 
+4. Elabore um conjunto de testes unitários para testar o ADT Stack (StackTest.java).
+
 5. Pretende-se uma diferente implementação baseada numa estrutura de dados de Lista Simplesmente Ligada, sem sentinelas.
 Partindo da estruturas de dados abaixo, complete a implementação da classe StackLinkedList.
 
@@ -39,7 +41,8 @@ public class StackLinkedList<T> implements Stack<T> {
 }
 ```
 
-6. Substitua a implementação de `Stack` utilizada no método `main()` por uma instância da classe anterior. Compile e teste o programa verificando que o comportamento do programa se mantém inalterado.
+6. Substitua a implementação de `Stack` utilizada na classe de teste (StackTest.java) por uma instância da classe StackLinkedList.Corra os testes.
+
 
 7. Quais as complexidades algorítmicas para as operações `push()` e `pop()` nas duas implementações obtidas?
 
