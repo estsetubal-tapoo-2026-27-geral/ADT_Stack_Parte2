@@ -62,7 +62,7 @@ A atividade fica concluída quando:
 - o projeto compila e todos os testes unitários passam.
 
 
-## Exercícios Complemenatres
+## Exercícios Complementares
 
 
 Os exercícios complementares permitem consolidar a matéria.
