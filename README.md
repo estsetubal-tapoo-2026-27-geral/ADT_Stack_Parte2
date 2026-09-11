@@ -46,8 +46,28 @@ public class StackLinkedList<T> implements Stack<T> {
 
 7. Quais as complexidades algorítmicas para as operações `push()` e `pop()` nas duas implementações obtidas?
 
+
+
+
+A atividade fica concluída quando:
+
+- todos os métodos inicialmente assinalados como não implementados estão completos e deixaram de lançar `NotImplementedException`;
+- a implementação baseada em `ArrayList` respeita o contrato definido pela interface `Stack<T>`;
+- existe uma classe `StackTest` com testes unitários para as operações `push`, `pop`, `peek`, `size` e `isEmpty`;
+- os testes incluem o comportamento normal da pilha e as situações de pilha vazia e pilha cheia;
+- `FullStackException` e `EmptyStackException` são lançadas e verificadas nas condições previstas pelo contrato;
+- `StackLinkedList<T>` está implementada com uma lista simplesmente ligada, sem sentinelas;
+- o mesmo conjunto de testes pode ser executado com `StackArrayList` e `StackLinkedList`, produzindo resultados equivalentes;
+- são identificadas e justificadas as complexidades temporais de `push()` e `pop()` nas duas implementações;
+- o projeto compila e todos os testes unitários passam.
+
+
 ## Exercícios Complemenatres
-1.  Para efeitos meramente pedagógicos, remova o atributo `size` da classe `StackLinkedList` e adapte o código existente para o tornar funcional. 
+
+
+Os exercícios complementares permitem consolidar a matéria.
+
+1. Para efeitos meramente pedagógicos, remova o atributo `size` da classe `StackLinkedList` e adapte o código existente para o tornar funcional. 
 
 
 2. Exercícios de utilização
