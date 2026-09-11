@@ -48,6 +48,7 @@ public class StackLinkedList<T> implements Stack<T> {
 
 
 
+## Critérios de conclusão da atividade
 
 A atividade fica concluída quando:
 
