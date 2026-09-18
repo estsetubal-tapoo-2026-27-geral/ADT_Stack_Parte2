@@ -11,7 +11,7 @@ Os exercícios solicitados são os seguintes:
 
 **1.** Faça *clone* deste projeto base **ADTStack_Parte2** (projeto **IntelliJ**) do *GitHub*:
 
-**2.** Relativamente à classe `StackArrayList` forneça o código dos métodos por implementar, i.e., os que estão a lançar `NotImplementedException`, n
+**2.** Relativamente à classe `StackArrayList` forneça o código dos métodos por implementar, i.e., os que estão a lançar `UnsupportedOperationException`.
 
 **3.** Compile e teste o programa fornecido, verificando que os resultados são os esperados; a excepção `FullStackException` deverá ser capturada com sucesso.
 
@@ -31,6 +31,7 @@ Organize os testes por comportamento. Cada teste deve validar uma única proprie
 | `peek` | `peek_does_not_remove` | Confirmar que a consulta não altera a pilha |
 | `pop` | `pop_returns_top` | Verificar a remoção e devolução do elemento no topo |
 | `pop` | `pop_updates_size` | Confirmar a atualização do tamanho após a remoção |
+| `clear` | `clear_empties_stack` | Confirmar que todos os elementos são removidos |
 | LIFO | `stack_is_lifo` | Validar a propriedade *Last In, First Out* |
 | Pilha vazia | `pop_empty_stack` | Verificar a exceção ao remover de uma pilha vazia |
 | Pilha vazia | `peek_empty_stack` | Verificar a exceção ao consultar uma pilha vazia |
@@ -43,7 +44,7 @@ Use `assertThrows` nos testes em que é esperada uma exceção. Nos restantes, c
 **5.** Pretende-se uma diferente implementação baseada numa estrutura de dados de **Lista Simplesmente Ligada**, sem sentinelas (ver diagrama ilustrativo abaixo).
 
 ![image](./docs/images/linkedList.png)
-Partindo da estruturas de dados abaixo, complete a implementação da classe StackLinkedList.
+Partindo da estrutura de dados abaixo, complete a implementação da classe `StackLinkedList`.
 
 ```java
 public class StackLinkedList<T> implements Stack<T> {
@@ -66,10 +67,10 @@ public class StackLinkedList<T> implements Stack<T> {
 }
 ```
 
-**6.** Substitua a implementação de `Stack` utilizada na classe de teste (StackTest.java) por uma instância da classe StackLinkedList.Corra os testes.
+**6.** Substitua a implementação de `Stack` utilizada na classe de teste (`StackTest`) por uma instância de `StackLinkedList` e execute os testes novamente.
 
 
-**7.** Quais as complexidades algorítmicas para as operações `push()` e `pop()` nas duas implementações obtidas?
+**7.** Indique e justifique as complexidades temporais de `push()` e `pop()` nas duas implementações.
 
 
 
@@ -77,9 +78,9 @@ public class StackLinkedList<T> implements Stack<T> {
 
 A atividade fica concluída quando:
 
-- todos os métodos inicialmente assinalados como não implementados estão completos e deixaram de lançar `NotImplementedException`;
-- a implementação baseada em `ArrayList` respeita o contrato definido pela interface `Stack<T>`;
-- existe uma classe `StackTest` com testes unitários para as operações `push`, `pop`, `peek`, `size` e `isEmpty`;
+- todos os métodos inicialmente assinalados como não implementados estão completos e deixaram de lançar `UnsupportedOperationException`;
+- a implementação `StackArrayList`, baseada num array de capacidade fixa, respeita o contrato definido pela interface `Stack<T>`;
+- existe uma classe `StackTest` com testes unitários para as operações `push`, `pop`, `peek`, `size`, `isEmpty` e `clear`;
 - os testes incluem o comportamento normal da pilha e as situações de pilha vazia e pilha cheia;
 - `FullStackException` e `EmptyStackException` são lançadas e verificadas nas condições previstas pelo contrato;
 - `StackLinkedList<T>` está implementada com uma lista simplesmente ligada, sem sentinelas;
