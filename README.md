@@ -88,3 +88,7 @@ A atividade fica concluída quando:
 - o projeto compila e todos os testes unitários passam.
 
 
+## Exercícios Complementares
+
+
+1. Para efeitos meramente pedagógicos, remova o atributo `size` da classe `StackLinkedList` e adapte o código existente para o tornar funcional.
