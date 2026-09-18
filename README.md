@@ -2,22 +2,47 @@ ADT Stack Template - 2026/27 [Parte 2]
 ===
 
 Este repositório consiste num projeto **IntelliJ** 
-de suporte à lecionação dos tipos abstratos de dados na linguagem Java,
+de suporte à lecionação dos tipos abstratos de dados (ADTs) na linguagem Java,
 no contexto da unidade curricular de *Tópicos Avançados de POO* - ESTSetúbal.
 
 Os exercícios solicitados são os seguintes:
 
 ## ADT Stack | Exercícios de implementação
 
-1. Faça *clone* deste projeto base **ADTStack_Template** (projeto **IntelliJ**) do *GitHub*:
+**1.** Faça *clone* deste projeto base **ADTStack_Parte2** (projeto **IntelliJ**) do *GitHub*:
 
-2. Forneça o código dos métodos por implementar, i.e., os que estão a lançar `NotImplementedException`, n
+**2.** Relativamente à classe `StackArrayList` forneça o código dos métodos por implementar, i.e., os que estão a lançar `NotImplementedException`, n
 
-3. Compile e teste o programa fornecido, verificando que os resultados são os esperados; a excepção `FullStackException` deverá ser capturada com sucesso.
+**3.** Compile e teste o programa fornecido, verificando que os resultados são os esperados; a excepção `FullStackException` deverá ser capturada com sucesso.
 
-4. Elabore um conjunto de testes unitários para testar o ADT Stack (StackTest.java).
+**4.** Elabore um conjunto de testes unitários para testar o ADT Stack (StackTest.java).
 
-5. Pretende-se uma diferente implementação baseada numa estrutura de dados de Lista Simplesmente Ligada, sem sentinelas.
+### Sugestão de testes unitários
+
+Organize os testes por comportamento. Cada teste deve validar uma única propriedade e ter um nome que descreva claramente o resultado esperado.
+
+| Categoria | Teste sugerido | Objetivo |
+|---|---|---|
+| Inicialização | `new_stack_is_empty` | Confirmar que uma nova pilha está vazia |
+| Inicialização | `new_stack_has_size_zero` | Confirmar que o tamanho inicial é zero |
+| `push` | `push_adds_element` | Verificar que o elemento é adicionado |
+| `push` | `push_updates_size` | Confirmar a atualização do tamanho após a inserção |
+| `peek` | `peek_returns_top` | Verificar que é devolvido o elemento no topo |
+| `peek` | `peek_does_not_remove` | Confirmar que a consulta não altera a pilha |
+| `pop` | `pop_returns_top` | Verificar a remoção e devolução do elemento no topo |
+| `pop` | `pop_updates_size` | Confirmar a atualização do tamanho após a remoção |
+| LIFO | `stack_is_lifo` | Validar a propriedade *Last In, First Out* |
+| Pilha vazia | `pop_empty_stack` | Verificar a exceção ao remover de uma pilha vazia |
+| Pilha vazia | `peek_empty_stack` | Verificar a exceção ao consultar uma pilha vazia |
+| Casos-limite | `push_duplicate_elements` | Confirmar que a pilha aceita valores repetidos |
+| Casos-limite | `push_many_elements` | Verificar a capacidade ou o crescimento da implementação |
+| Sequências | `mixed_operations` | Validar a interação entre várias operações consecutivas |
+
+Use `assertThrows` nos testes em que é esperada uma exceção. Nos restantes, combine asserções sobre o elemento devolvido, o topo, o tamanho e o estado vazio da pilha, conforme o comportamento em análise.
+
+**5.** Pretende-se uma diferente implementação baseada numa estrutura de dados de **Lista Simplesmente Ligada**, sem sentinelas (ver diagrama ilustrativo abaixo).
+
+![image](./docs/images/linkedList.png)
 Partindo da estruturas de dados abaixo, complete a implementação da classe StackLinkedList.
 
 ```java
@@ -41,10 +66,10 @@ public class StackLinkedList<T> implements Stack<T> {
 }
 ```
 
-6. Substitua a implementação de `Stack` utilizada na classe de teste (StackTest.java) por uma instância da classe StackLinkedList.Corra os testes.
+**6.** Substitua a implementação de `Stack` utilizada na classe de teste (StackTest.java) por uma instância da classe StackLinkedList.Corra os testes.
 
 
-7. Quais as complexidades algorítmicas para as operações `push()` e `pop()` nas duas implementações obtidas?
+**7.** Quais as complexidades algorítmicas para as operações `push()` e `pop()` nas duas implementações obtidas?
 
 
 
@@ -63,23 +88,3 @@ A atividade fica concluída quando:
 - o projeto compila e todos os testes unitários passam.
 
 
-## Exercícios Complementares
-
-
-Os exercícios complementares permitem consolidar a matéria.
-
-1. Para efeitos meramente pedagógicos, remova o atributo `size` da classe `StackLinkedList` e adapte o código existente para o tornar funcional. 
-
-
-2. Exercícios de utilização
-
-Um programa deverá solicitar um número ao utilizador, e.g., 233 e apresentar esse número em binário. O algoritmo divide sucessivamente o número por 2 (divisão inteira) até zero e guarda numa pilha o resto das divisões – ver figura. O número em binário é obtido removendo todos os elementos da pilha, i.e., pela ordem de saída. 
-
-![image](./docs/stack-binary.png)
-
-
-a. Crie uma classe `DecimalToBinary` contendo um método `main`; implemente o algoritmo solicitado no método:
-
-    > `public static String decimal2Binary(int decimal)`
-
-b. No método `main` crie o programa que solicita ao utilizador um número decimal e apresente a sua representação em binário; invoque o método anterior.

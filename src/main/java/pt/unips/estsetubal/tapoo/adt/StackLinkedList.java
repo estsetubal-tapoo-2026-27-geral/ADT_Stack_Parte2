@@ -6,31 +6,38 @@ public class StackLinkedList<T> implements Stack<T> {
 
     @Override
     public void push(T element) throws FullStackException {
+     throw new UnsupportedOperationException("This method is not implemented yet.");
 
     }
 
     @Override
     public T pop() throws EmptyStackException {
-        return null;
+        throw new UnsupportedOperationException("This method is not implemented yet.");
+
     }
 
     @Override
     public T peek() throws EmptyStackException {
-        return null;
+        throw new UnsupportedOperationException("This method is not implemented yet.");
+
     }
 
     @Override
     public int size() {
-        return 0;
+        throw new UnsupportedOperationException("This method is not implemented yet.");
+
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        throw new UnsupportedOperationException("This method is not implemented yet.");
     }
 
     @Override
     public void clear() {
+        throw new UnsupportedOperationException("This method is not implemented yet.");
+
+
 
     }
 }

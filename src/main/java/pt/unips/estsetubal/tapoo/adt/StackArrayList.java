@@ -8,7 +8,7 @@ public class StackArrayList<T> implements Stack<T> {
     private T[] elements;
     private int size;
 
-    @SuppressWarnings("unchecked")
+
     public StackArrayList() {
         this.elements = (T[])new Object[DEFAULT_CAPACITY];
         this.size = 0;
@@ -51,6 +51,7 @@ public class StackArrayList<T> implements Stack<T> {
 
     @Override
     public void clear() {
+
         throw new UnsupportedOperationException("This method is not implemented yet.");
 }
 
